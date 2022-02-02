@@ -1,1 +1,12 @@
 /* add home page styles here */
+.top-right {
+    position:absolute;
+    top:0;
+    right:0;
+}
+#enemy-info{
+    padding: 30px;
+
+}
+
+
