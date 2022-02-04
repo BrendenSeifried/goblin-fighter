@@ -1,12 +1,18 @@
 /* add home page styles here */
-.top-right {
+/* .top-right {
     position:absolute;
     top:0;
     right:0;
-}
+} */
 #enemy-info{
     padding: 30px;
 
 }
 
-
+#attack {
+    position:relative;
+     left:100px; 
+     top: 300px;
+    font-size: larger;
+    font-weight: bolder;
+}
