@@ -47,11 +47,11 @@ function renderEnemyNames() {
     }
 }
 
-
+renderEnemyNames();
 
 
 function clicky(eName) {
-    if (playerHP <= 0) return;
+    if (playerHP <= 0) {return;}
     if (eName.HP <= 0){
         eName.icon = '../assets/dead.png';
         alert('Enemy Defeated!');
