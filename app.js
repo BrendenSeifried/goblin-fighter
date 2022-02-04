@@ -19,9 +19,13 @@ function renderEnemyNames() {
     for (let eName of eNames) {
         const li = renderEnemyName(eName);
         li.addEventListener('click', (e) => {
+            eName.ID++;
+            eName.HP--;
             console.log('clicked', eNames);
             
         });
+        
+        //ID++;
         listEnemy.append(li);
 
         console.log(eName);
@@ -40,7 +44,7 @@ enemyInfo.addEventListener('submit', (e) => {
         enemyNme: addEName.get('enemyNme'),
         icon: '../assets/alive.png',
         HP: 3,
-        // ID:++, 
+        ID: 0, 
         //button:
         
     };
