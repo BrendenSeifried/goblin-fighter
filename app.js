@@ -40,7 +40,7 @@ enemyInfo.addEventListener('submit', (e) => {
 
 
 
-attack.addEventListener('click', (e) =>{
+hit.addEventListener('click', (e) =>{
     //if (enemyInfo.Hp < 1) return;
     // if  (Math.random() < 0.5) {    //enemy health 
     //     enemyInfo.HP--;
