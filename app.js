@@ -18,7 +18,7 @@ function renderEnemyNames() {
     for (let eName of eNames) {
         const li = renderEnemyName(eName);
         li.addEventListener('click', (e) => {
-            eName.HP--;
+           // eName.HP--;
             if (eName.HP <= 0){
                 eName.icon === '../assets/dead.png';
                 console.log('DEAD!');
@@ -28,7 +28,7 @@ function renderEnemyNames() {
                 eName.HP--; 
                 console.log('HIT!');
             } else {
-                eName.HP++;
+                //eName.HP++;
                 console.log('MISS!');
             }
 
@@ -37,13 +37,11 @@ function renderEnemyNames() {
             
         });
 
-        //ID++;
         listEnemy.append(li);
         
 
         console.log(eName);
     }
-    eNames.push(eName);
 }
 
 
@@ -56,7 +54,7 @@ enemyInfo.addEventListener('submit', (e) => {
     const enName = {
         enemyNme: addEName.get('enemyNme'),
         icon: '../assets/alive.png',
-        HP: 6,
+        HP: 3,
         //ID: ++, 
         //button:
         
