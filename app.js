@@ -19,8 +19,12 @@ function renderEnemyNames() {
         const li = renderEnemyName(eName);
         li.addEventListener('click', (e) => {
             eName.HP--;
-            //if (eName.HP <= 0) return;
-            if (Math.random() < 0.5) {
+            if (eName.HP <= 0){
+                eName.icon === '../assets/dead.png';
+                console.log('DEAD!');
+            }
+            
+            else if (Math.random() < 0.5) {
                 eName.HP--; 
                 console.log('HIT!');
             } else {
@@ -35,10 +39,11 @@ function renderEnemyNames() {
 
         //ID++;
         listEnemy.append(li);
+        
 
         console.log(eName);
     }
-   
+    eNames.push(eName);
 }
 
 
