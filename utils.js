@@ -6,5 +6,4 @@ export function renderEnemyName(eName) {
     img.src = eName.icon;
     div.append(img, li);
     return div;
-    
 }

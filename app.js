@@ -22,19 +22,26 @@ function renderEnemyNames() {
 
 
 
-
 enemyInfo.addEventListener('submit', (e) => {
     e.preventDefault();
     const addEName = new FormData(enemyInfo);
     const enName = {
         enemyNme: addEName.get('enemyNme'),
-        HP: 3,
         icon: '../assets/alive.png',
+        HP: 3,
+        
     };
     
     eNames.push(enName);
     renderEnemyNames();
 });
+
+attack.addEventListener('click', (e) =>{
+    if (enemyInfo.Hp < 1) return;
+    else { (Math.random() < 0.5) 
+        enemyInfo.HP--;
+    } 
+);
 // console.log('the', enemyNameBtn);
   
 
