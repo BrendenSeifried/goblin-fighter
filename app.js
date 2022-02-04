@@ -2,8 +2,12 @@
 import { renderEnemyName } from './utils.js';
 
 
+
 const enemyInfo = document.getElementById('enemy-info');
 const listEnemy = document.getElementById('list-enemy');
+
+//const playerID = document.querySelector('player');
+const playerID = document.getElementById('player');
 // let state
 
 // const playerInfo = document.getElementById('player-info');
@@ -15,6 +19,16 @@ let eNames = [
     { enemyNme: 'Bob', icon: '../assets/alive.png', HP: 3 },
     { enemyNme: 'Tom', icon: '../assets/alive.png', HP: 3 }
 ];
+
+
+// function renderPlayers() {
+//     listPlayer.innerHTML = '';
+//     const div = renderPlayer(playerHP);
+//     div.addEventListener('click', (e) => {
+//         clicky(playerHP);
+//     });
+//     console.log(playerHP);
+// }
 
 
 
@@ -61,13 +75,15 @@ function clicky(eName) {
        // console.log('enemy hit!');
     } else {
         alert('Enemy Attack Dodged!');
-        console.log('enemy missed!');
+       // console.log('enemy missed!');
     }
 
-
+    playerID.textContent = playerHP;
         
     //console.log('clicked', eNames);
     renderEnemyNames();
+    console.log(playerHP);
+   // renderPlayers();
 }
 
 
@@ -78,15 +94,25 @@ enemyInfo.addEventListener('submit', (e) => {
         enemyNme: addEName.get('enemyNme'),
         icon: '../assets/alive.png',
         HP: 3,
-        //ID: ++, 
-        //button:
         
     };
-    //enName.ID++;
     eNames.push(enName);
     renderEnemyNames();
-    //renderAttack();
+    //renderPlayers();
+
 });
+
+// playerInfo.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const addPName = new FormData(playerInfo);
+//     const playerName = {
+//         pHP: Number('playerHP'),
+        
+//     };
+//     eNames.push(playerName);
+//     renderPlayers();
+
+// });
 
 
 

@@ -24,8 +24,17 @@
      
 }
 
-.player {
+/* .player {
     position:absolute;
-     left:500px; 
+     left:300px; 
      top: 200px;
+    
+} */
+
+
+.player-stats {
+    position:absolute;
+     left:300px; 
+     top: 200px;
+    color:white;
 }
