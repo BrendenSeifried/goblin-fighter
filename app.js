@@ -1,25 +1,42 @@
-import { renderEnemyName } from './utils';
+import { renderEnemyName } from './utils.js';
 
 // import functions and grab DOM elements
-const enemyName = document.getElementById('enemy-name');
+
+const enemyInfo = document.getElementById('enemy-info');
+const enemyNameBtn = document.getElementById('enemyNameBtn');
+const listEnemy = document.getElementById('list-enemy');
 // let state
 
 let eNames = []; //enemy name empty string
 // set event listeners 
 
 
-enemyName.addEventListener('click', (e) => {
+function renderEnemyNames() {
+    listEnemy.textContent = '';
+    for (let eName of eNames) {
+        const li = renderEnemyName(eName);
+        listEnemy.append(li);
+        // console.log(eName);
+    }
+   
+}
+
+
+
+
+enemyNameBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const addEName = new FormData(enemyName);
-    const userData = {
-        name: addEName.get('name'),
+    const addEName = new FormData(enemyInfo);
+    const enName = {
+        enemyNme: addEName.get('enemyNme'),
+        //health: addEName.get('enemyhealth'),
     };
-    console.log(userData);
-    eNames.push(userData);
-    renderEnemyName();
-  
+    
+    eNames.push(enName);
+    renderEnemyNames();
 });
-  //console.log(meal);
+// console.log('the', enemyNameBtn);
+  
 
   // get user input
   // use user input to update state 
