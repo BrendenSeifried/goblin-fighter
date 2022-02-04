@@ -18,3 +18,7 @@ export function renderEnemyName(eName) {
     div.append(img, li);
     return div;
 }
+
+// export function renderAttack(){   //figure out function for getting enemy HP to zero
+//     let eName.HP = 0;
+// }
