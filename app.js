@@ -8,36 +8,55 @@ const listEnemy = document.getElementById('list-enemy');
 
 //const hit = document.getElementById('attack');
 
-let eNames = []; //enemy name empty string
+let eNames = [];
+let palyerStuff = [];  //enemy name empty string
 //let eHP = [];
 // set event listeners 
+
+
+// function renderEnemyNames() {
+//     listEnemy.innerHTML = '';
+//     for (let eName of eNames) {
+//         const li = renderEnemyName(eName);
+//         li.addEventListener('click', (e) => {
+//            // eName.HP--;
+//             if (eName.HP <= 0){
+//                 eName.icon = '../assets/dead.png';
+//                 console.log('DEAD!');
+//             }
+            
+//             else if (Math.random() < 0.5) {
+//                 eName.HP--; 
+//                 console.log('HIT!');
+//             } else {
+//                 //eName.HP++;
+//                 console.log('MISS!');
+//             }
+
+            
+//             console.log('clicked', eNames);
+            
+//         });
+
+//         listEnemy.append(li);
+        
+
+//         console.log(eName);
+//     }
+// }
+
+
 
 
 function renderEnemyNames() {
     listEnemy.innerHTML = '';
     for (let eName of eNames) {
-        const li = renderEnemyName(eName);
-        li.addEventListener('click', (e) => {
-           // eName.HP--;
-            if (eName.HP <= 0){
-                eName.icon === '../assets/dead.png';
-                console.log('DEAD!');
-            }
-            
-            else if (Math.random() < 0.5) {
-                eName.HP--; 
-                console.log('HIT!');
-            } else {
-                //eName.HP++;
-                console.log('MISS!');
-            }
-
-            
-            console.log('clicked', eNames);
-            
+        const div = renderEnemyName(eName);
+        div.addEventListener('click', (e) => {
+            clicky(eName); 
         });
 
-        listEnemy.append(li);
+        listEnemy.append(div);
         
 
         console.log(eName);
@@ -46,6 +65,25 @@ function renderEnemyNames() {
 
 
 
+
+function clicky(eName) {
+    if (eName.HP <= 0){
+        eName.icon = '../assets/dead.png';
+        console.log('DEAD!');
+    }
+        
+    else if (Math.random() < 0.5) {
+        eName.HP--; 
+        console.log('HIT!');
+    } else {
+         
+        console.log('MISS!');
+    }
+
+        
+    console.log('clicked', eNames);
+    renderEnemyNames();
+}
 
 
 enemyInfo.addEventListener('submit', (e) => {
