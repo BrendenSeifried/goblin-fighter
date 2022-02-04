@@ -14,7 +14,7 @@ export function renderEnemyName(eName) {
     const img = document.createElement('img');
     //const button = document.createElement('button');
     //const hit = document.getElementById('attack');
-    li.textContent = `${eName.enemyNme} ${eName.HP} ${eName.ID}`;
+    li.textContent = `${eName.enemyNme} ${eName.HP}`;
     img.src = eName.icon;
     //button.textContent = 'attack!';
     //button.click;
