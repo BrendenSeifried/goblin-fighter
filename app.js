@@ -6,10 +6,15 @@ const enemyInfo = document.getElementById('enemy-info');
 const listEnemy = document.getElementById('list-enemy');
 // let state
 
-//const hit = document.getElementById('attack');
+// const playerInfo = document.getElementById('player-info');
+// const listPlayer = document.getElementById('list-player');
 
-let eNames = [];
-let palyerStuff = [];  //enemy name empty string
+//const hit = document.getElementById('attack');
+let playerHP = 10;
+let eNames = [
+
+];
+// let playerStuff = [];  //enemy name empty string
 //let eHP = [];
 // set event listeners 
 
@@ -47,6 +52,21 @@ let palyerStuff = [];  //enemy name empty string
 
 
 
+// function renderPlayers() {
+//     listPlayer.innerHTML = '';
+//     for (let stuff of playerStuff) {
+//         const div = renderPlayer(stuff);
+//         div.addEventListener('click', (e) => {
+//             clicky(eName); 
+//         });
+
+//         listPlayer.append(div);
+        
+
+//         console.log(stuff);
+//     }
+// }
+
 
 function renderEnemyNames() {
     listEnemy.innerHTML = '';
@@ -67,6 +87,7 @@ function renderEnemyNames() {
 
 
 function clicky(eName) {
+    if (playerHP <= 0) return;
     if (eName.HP <= 0){
         eName.icon = '../assets/dead.png';
         console.log('DEAD!');
@@ -79,6 +100,14 @@ function clicky(eName) {
          
         console.log('MISS!');
     }
+
+    if (Math.random() < 0.5) {
+        playerHP--;
+        console.log('enemy hit!');
+    } else {
+        console.log('enemy missed!');
+    }
+
 
         
     console.log('clicked', eNames);
@@ -103,23 +132,22 @@ enemyInfo.addEventListener('submit', (e) => {
     //renderAttack();
 });
 
-// enemyInfo.addEventListener('submit', (e) => {
+// playerInfo.addEventListener('submit', (e) => {
 //     e.preventDefault();
-//     const addEName = new FormData(enemyInfo);
+//     const addPName = new FormData(playerInfo);
 //     const enName = {
-//         enemyNme: addEName.get('enemyNme'),
+       
 //         icon: '../assets/alive.png',
-//         HP: 3,
-//         // ID:++, 
+//         HP: 10,
+//         //ID: ++, 
 //         //button:
         
 //     };
-    
+//     //enName.ID++;
 //     eNames.push(enName);
-//     renderEnemyNames();
-//     renderAttack();
+//     renderPlayer();
+//     //renderAttack();
 // });
-
 
 
   
