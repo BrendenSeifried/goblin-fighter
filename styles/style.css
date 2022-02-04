@@ -65,10 +65,11 @@ section {
 } */
 
 
+
 h2 {
     font-size: 1.8rem;
     font-weight: bolder;
-    color: var(--color1);
+    color: white;
 }
 
 .gutter-right {
