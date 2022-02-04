@@ -3,7 +3,6 @@ import { renderEnemyName } from './utils.js';
 // import functions and grab DOM elements
 
 const enemyInfo = document.getElementById('enemy-info');
-const enemyNameBtn = document.getElementById('enemyNameBtn');
 const listEnemy = document.getElementById('list-enemy');
 // let state
 
@@ -24,12 +23,13 @@ function renderEnemyNames() {
 
 
 
-enemyNameBtn.addEventListener('click', (e) => {
+enemyInfo.addEventListener('submit', (e) => {
     e.preventDefault();
     const addEName = new FormData(enemyInfo);
     const enName = {
         enemyNme: addEName.get('enemyNme'),
-        //health: addEName.get('enemyhealth'),
+        HP: 3,
+        icon: '../assets/alive.png',
     };
     
     eNames.push(enName);
