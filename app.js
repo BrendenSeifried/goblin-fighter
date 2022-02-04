@@ -18,8 +18,17 @@ function renderEnemyNames() {
     for (let eName of eNames) {
         const li = renderEnemyName(eName);
         li.addEventListener('click', (e) => {
-            //eName.ID++;
             eName.HP--;
+            //if (eName.HP <= 0) return;
+            if (Math.random() < 0.5) {
+                eName.HP--; 
+                console.log('HIT!');
+            } else {
+                eName.HP++;
+                console.log('MISS!');
+            }
+
+            
             console.log('clicked', eNames);
             
         });
@@ -42,12 +51,12 @@ enemyInfo.addEventListener('submit', (e) => {
     const enName = {
         enemyNme: addEName.get('enemyNme'),
         icon: '../assets/alive.png',
-        HP: 3,
+        HP: 6,
         //ID: ++, 
         //button:
         
     };
-    enName.ID++;
+    //enName.ID++;
     eNames.push(enName);
     renderEnemyNames();
     //renderAttack();
