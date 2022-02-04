@@ -6,6 +6,8 @@ const enemyInfo = document.getElementById('enemy-info');
 const listEnemy = document.getElementById('list-enemy');
 // let state
 
+const hit = document.getElementById('attack');
+
 let eNames = []; //enemy name empty string
 // set event listeners 
 
@@ -36,12 +38,18 @@ enemyInfo.addEventListener('submit', (e) => {
     renderEnemyNames();
 });
 
+
+
 attack.addEventListener('click', (e) =>{
-    if (enemyInfo.Hp < 1) return;
-    else { (Math.random() < 0.5) 
-        enemyInfo.HP--;
-    } 
-);
+    //if (enemyInfo.Hp < 1) return;
+    // if  (Math.random() < 0.5) {    //enemy health 
+    //     enemyInfo.HP--;
+    // } //else {
+    //     pNames.HP--    // player health 
+    // }
+    eNames.HP--;
+    console.log(eNames.HP);
+});
 // console.log('the', enemyNameBtn);
   
 
