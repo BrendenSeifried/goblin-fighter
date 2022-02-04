@@ -23,3 +23,9 @@
      left:500px; 
      
 }
+
+.player {
+    position:absolute;
+     left:500px; 
+     top: 200px;
+}

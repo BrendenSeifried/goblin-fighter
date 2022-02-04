@@ -12,60 +12,10 @@ const listEnemy = document.getElementById('list-enemy');
 //const hit = document.getElementById('attack');
 let playerHP = 10;
 let eNames = [
-
+    { enemyNme: 'Bob', icon: '../assets/alive.png', HP: 3 },
+    { enemyNme: 'Tom', icon: '../assets/alive.png', HP: 3 }
 ];
-// let playerStuff = [];  //enemy name empty string
-//let eHP = [];
-// set event listeners 
 
-
-// function renderEnemyNames() {
-//     listEnemy.innerHTML = '';
-//     for (let eName of eNames) {
-//         const li = renderEnemyName(eName);
-//         li.addEventListener('click', (e) => {
-//            // eName.HP--;
-//             if (eName.HP <= 0){
-//                 eName.icon = '../assets/dead.png';
-//                 console.log('DEAD!');
-//             }
-            
-//             else if (Math.random() < 0.5) {
-//                 eName.HP--; 
-//                 console.log('HIT!');
-//             } else {
-//                 //eName.HP++;
-//                 console.log('MISS!');
-//             }
-
-            
-//             console.log('clicked', eNames);
-            
-//         });
-
-//         listEnemy.append(li);
-        
-
-//         console.log(eName);
-//     }
-// }
-
-
-
-// function renderPlayers() {
-//     listPlayer.innerHTML = '';
-//     for (let stuff of playerStuff) {
-//         const div = renderPlayer(stuff);
-//         div.addEventListener('click', (e) => {
-//             clicky(eName); 
-//         });
-
-//         listPlayer.append(div);
-        
-
-//         console.log(stuff);
-//     }
-// }
 
 
 function renderEnemyNames() {
@@ -90,27 +40,33 @@ function clicky(eName) {
     if (playerHP <= 0) return;
     if (eName.HP <= 0){
         eName.icon = '../assets/dead.png';
-        console.log('DEAD!');
+        alert('Enemy Defeated!');
+        //console.log('DEAD!');
+        return;
     }
         
     else if (Math.random() < 0.5) {
         eName.HP--; 
-        console.log('HIT!');
+        alert('Hit Enemy!');
+      //  console.log('HIT!');
     } else {
-         
-        console.log('MISS!');
+        alert('Missed Enemy!');
+       // console.log('MISS!');
     }
+
 
     if (Math.random() < 0.5) {
         playerHP--;
-        console.log('enemy hit!');
+        alert('Enemy scores hit HP lost!');
+       // console.log('enemy hit!');
     } else {
+        alert('Enemy Attack Dodged!');
         console.log('enemy missed!');
     }
 
 
         
-    console.log('clicked', eNames);
+    //console.log('clicked', eNames);
     renderEnemyNames();
 }
 
@@ -132,22 +88,6 @@ enemyInfo.addEventListener('submit', (e) => {
     //renderAttack();
 });
 
-// playerInfo.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const addPName = new FormData(playerInfo);
-//     const enName = {
-       
-//         icon: '../assets/alive.png',
-//         HP: 10,
-//         //ID: ++, 
-//         //button:
-        
-//     };
-//     //enName.ID++;
-//     eNames.push(enName);
-//     renderPlayer();
-//     //renderAttack();
-// });
 
 
   
