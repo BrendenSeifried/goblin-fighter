@@ -37,27 +37,29 @@ renderEnemyNames();
 
 
 function clicky(eName) {
-    if (playerHP <= 0) {return;}
+    if (playerHP <= 0) {
+        alert('You have succumb to your inner demons. GAME OVER');
+        return;}
     if (eName.HP <= 0){
         eName.icon = '../assets/dead.png';
-        alert('Enemy Defeated!');
+        alert('Enemy Defeated! Move to the next as it crumbles at your feet.');
         //console.log('DEAD!');
         return;
     }
         
     else if (Math.random() < 0.5) {
         eName.HP--; 
-        alert('Hit Enemy!');
+        alert(`Hit ${eName.enemyNme} the Demon!`);
     } else {
-        alert('Missed Enemy!');
+        alert(`Missed ${eName.enemyNme} the Demon!`);
     }
 
 
     if (Math.random() < 0.5) {
         playerHP--;
-        alert('Enemy scores hit HP lost!');
+        alert(`${eName.enemyNme} the Demon scores hit HP lost!`);
     } else {
-        alert('Enemy Attack Dodged!');
+        alert(`${eName.enemyNme} the Demon Attack Dodged!`);
     }
 
     playerID.textContent = playerHP;
