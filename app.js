@@ -36,7 +36,7 @@ function renderEnemyNames() {
     listEnemy.innerHTML = '';
     for (let eName of eNames) {
         const div = renderEnemyName(eName);
-        div.addEventListener('click', (e) => {
+        div.addEventListener('click', () => {
             clicky(eName); 
         });
 
