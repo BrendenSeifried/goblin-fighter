@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+
 body {
     /* feel free to update these css variables for a quick theme */
     
@@ -55,9 +58,17 @@ section {
     margin-bottom: var(--gutter);
 }
    
+h1{
+    font-size: 200px;
+    font-family: 'Creepster', cursive;;
+    font-weight: bolder;
+    color:rgb(105, 15, 15);
+}
+
+
 
 h2 {
-    font-size: 1.8rem;
+    font-size:xx-large;
     font-weight: bolder;
     color:white;
 }

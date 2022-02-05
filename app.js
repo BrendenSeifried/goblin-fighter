@@ -5,10 +5,10 @@ import { renderEnemyName } from './utils.js';
 
 const enemyInfo = document.getElementById('enemy-info');
 const listEnemy = document.getElementById('list-enemy');
+const playerPic = document.getElementById('playerimg');
 
 const playerID = document.getElementById('player');
-
-
+const gameOver = document.getElementById('gameover');
 
 let playerHP = 10;
 let eNames = [
@@ -38,7 +38,9 @@ renderEnemyNames();
 
 function clicky(eName) {
     if (playerHP <= 0) {
+        playerPic.src = './assets/player-dead.jpg';
         alert('You have succumb to your inner demons. GAME OVER');
+        gameOver.textContent = 'GAME OVER';
         return;}
     if (eName.HP <= 0){
         eName.icon = '../assets/dead.png';
