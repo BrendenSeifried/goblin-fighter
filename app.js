@@ -49,9 +49,9 @@ function clicky(eName) {
         
     else if (Math.random() < 0.5) {
         eName.HP--; 
-        alert(`Hit ${eName.enemyNme} the Demon!`);
+        alert(`You successfully struck ${eName.enemyNme} the Demon!`);
     } else {
-        alert(`Missed ${eName.enemyNme} the Demon!`);
+        alert(`You missed ${eName.enemyNme} the Demon!`);
     }
 
 
@@ -59,7 +59,7 @@ function clicky(eName) {
         playerHP--;
         alert(`${eName.enemyNme} the Demon scores hit HP lost!`);
     } else {
-        alert(`${eName.enemyNme} the Demon Attack Dodged!`);
+        alert(`${eName.enemyNme} the Demon's Attack Dodged!`);
     }
 
     playerID.textContent = playerHP;
