@@ -15,7 +15,7 @@ let eNames = [
     { enemyNme: 'Bob', icon: '../assets/alive.png', HP: 3 },
     { enemyNme: 'Tom', icon: '../assets/alive.png', HP: 3 }
 ];
-
+playerID.textContent = playerHP;
 
 
 function renderEnemyNames() {
