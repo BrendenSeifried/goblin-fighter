@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+
 body {
     /* feel free to update these css variables for a quick theme */
     
@@ -29,6 +32,8 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+
+    background: url(../assets/city.jpg);
 }
 
 main {
@@ -37,10 +42,11 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    
 }
 
 section {
-    background-color: var(--color5);
+    background-color: transparent;
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -50,21 +56,21 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+}
+   
+h1{
+    font-size: 200px;
+    font-family: 'Creepster', cursive;;
+    font-weight: bolder;
+    color:rgb(105, 15, 15);
 }
 
-header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-}
 
 
 h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size:xx-large;
+    font-weight: bolder;
+    color:white;
 }
 
 .gutter-right {
@@ -89,3 +95,4 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+

@@ -1,1 +1,29 @@
-/* add home page styles here */
+
+#enemy-info{
+    padding: 30px;
+
+}
+
+#attack {
+    position:absolute;
+     right: 200;
+     bottom: 400px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#list-enemy {
+    color: white;
+    position:relative;
+     left:500px; 
+     
+}
+
+
+.player-stats {
+    position:absolute;
+     left:300px; 
+     top: 200px;
+    color:white;
+}
+
